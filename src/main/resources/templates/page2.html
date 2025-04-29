@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Page 2</title>
+</head>
+<body>
+<h2>Page 2: Enter Email and Phone</h2>
+<p>First Name: <span th:text="${userFormData.firstName}"></span></p>
+<p>Last Name: <span th:text="${userFormData.lastName}"></span></p>
+
+<form action="#" th:action="@{/form/page2}" th:object="${userFormData}" method="post">
+    Email: <input type="email" th:field="*{email}" /><br/>
+    Phone: <input type="text" th:field="*{phone}" /><br/>
+    <button type="submit">Next</button>
+</form>
+</body>
+</html>
